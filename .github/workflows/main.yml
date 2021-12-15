@@ -30,8 +30,9 @@ jobs:
         branch: master
     
     - name: Run a Web Page
-      run: |
-         npm ci
-         npm run build --if-present
-         npm test           
-         #         uses: JamesIves/github-pages-deploy-action@4.1.7
+    - run: yarn
+    - run: yarn run build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./build
