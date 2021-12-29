@@ -24,7 +24,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.8
         with:
           branch: 
-            github_page
+            master
           folder: 
-            build
+            .
          
